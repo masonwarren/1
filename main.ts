@@ -4,7 +4,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 let Bob: Sprite = null
-music.play(music.stringPlayable("C C C C C C C C ", 144), music.PlaybackMode.LoopingInBackground)
 scene.setBackgroundColor(13)
 Bob = sprites.create(img`
     ................

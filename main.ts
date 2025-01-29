@@ -1,5 +1,11 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Bob.vy == 0) {
+        Bob.vy = -152
+    }
+})
+let Bob: Sprite = null
 scene.setBackgroundColor(13)
-let mySprite = sprites.create(img`
+Bob = sprites.create(img`
     . . . . f f f f f f . . . . . . 
     . . . . e e e e e e . . . . . . 
     . . . . f f e e f f . . . . . . 
@@ -17,4 +23,7 @@ let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
+controller.moveSprite(Bob, 70, 0)
+scene.cameraFollowSprite(Bob)
+Bob.ay = 350
 tiles.setCurrentTilemap(tilemap`level4`)

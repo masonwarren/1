@@ -25,5 +25,5 @@ Bob = sprites.create(img`
     `, SpriteKind.Player)
 controller.moveSprite(Bob, 70, 0)
 scene.cameraFollowSprite(Bob)
-Bob.ay = 350
 tiles.setCurrentTilemap(tilemap`level4`)
+Bob.ay = 350
